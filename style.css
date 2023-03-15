@@ -68,6 +68,26 @@ main{
   align-items: center;
 }
 
+
+main div{
+  position: relative;
+  
+  margin: 3.2rem;
+}
+
+main div span{
+  color: var(--fc-span);
+  line-height: 3.4rem;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  
+  background: #FEEAFA;
+  border-radius: 2rem;
+  
+  padding: 0 2.4rem;
+}
+
 p{
   max-width: 30.5rem;
 
@@ -84,21 +104,38 @@ p{
   color: var(--fc-texting);
 }
 
-main div{
-  position: relative;
-
-  margin: 3.2rem;
+.card img{
+  animation: downtop 1s;
 }
 
-main div span{
-  color: var(--fc-span);
-  line-height: 3.4rem;
-  position: absolute;
-  right: 2rem;
-  top: 2rem;
+.card span{
+  animation: typeicecream 800ms 400ms backwards;
+}
 
-  background: #FEEAFA;
-  border-radius: 2rem;
+@keyframes downtop{
+  0%{
+    opacity: 0;
+    transform: translateY(100px);
+  }
 
-  padding: 0 2.4rem;
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typeicecream{
+  0%{
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  50%{
+    opacity: 0.5;
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
